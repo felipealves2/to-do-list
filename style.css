@@ -1,0 +1,680 @@
+/* =========================
+   CORES DA PALETA
+========================= */
+
+:root {
+
+    --primary: #011551;
+    --primary-light: #1C83E5;
+
+    --background: #f4f7fb;
+    --white: #ffffff;
+
+    --text: #141936;
+    --text-light: #6b7280;
+
+    --border: #e4e8f0;
+
+    --danger: #e54848;
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(135deg,
+            #eef4ff,
+            #f8faff);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text);
+
+}
+
+
+/* =========================
+   APLICAÇÃO
+========================= */
+
+.app {
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 30px 20px;
+
+    background: var(--white);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(1, 21, 81, 0.12);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.header {
+
+    background:
+        linear-gradient(135deg,
+            var(--primary),
+            #08277d);
+
+    padding: 30px 35px;
+
+    color: white;
+
+}
+
+
+.logo {
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.logo-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 14px;
+
+    background: var(--primary-light);
+
+    font-size: 25px;
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(28, 131, 229, 0.35);
+
+}
+
+
+.logo h1 {
+
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+
+.logo p {
+
+    margin-top: 3px;
+
+    font-size: 13px;
+
+    color: #d7e5ff;
+
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.content {
+
+    padding: 35px;
+
+}
+
+
+.welcome {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+}
+
+
+.welcome h2 {
+
+    font-size: 26px;
+
+    color: var(--primary);
+
+}
+
+
+#taskCounter {
+
+    background: #eaf4ff;
+
+    color: var(--primary-light);
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.task-input {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.task-input input {
+
+    flex: 1;
+
+    height: 52px;
+
+    padding: 0 18px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: var(--text);
+
+    transition: 0.25s;
+
+}
+
+
+.task-input input::placeholder {
+
+    color: #9b9fa8;
+
+}
+
+
+.task-input input:focus {
+
+    border-color: var(--primary-light);
+
+    box-shadow:
+        0 0 0 4px rgba(28, 131, 229, 0.10);
+
+}
+
+
+/* =========================
+   BOTÃO ADICIONAR
+========================= */
+
+#addButton {
+
+    height: 52px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.25s;
+
+}
+
+
+#addButton span {
+
+    font-size: 22px;
+
+    line-height: 1;
+
+}
+
+
+#addButton:hover {
+
+    background: rgb(9, 139, 9);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(1, 21, 81, 0.20);
+
+}
+
+
+#addButton:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================
+   LISTA
+========================= */
+
+#taskList {
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #222222;
+
+}
+
+#taskList li {
+
+    padding: 10px;
+
+    border: 1px solid #071531;
+
+    border-radius: 12px;
+
+    background: #fbfcff;
+
+    transition: 0.25s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+
+#taskList .task-text {
+
+    min-width: 0;
+    flex: 1;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+}
+
+
+#taskList .remove-task {
+
+    cursor: pointer;
+    flex-shrink: 0;
+
+}
+
+
+
+
+/* =========================
+   TAREFA
+========================= */
+
+.task {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: #fbfcff;
+
+    transition: 0.25s;
+
+    animation: taskAppear 0.3s ease;
+
+}
+
+
+.task:hover {
+
+    border-color: #c9d9ef;
+
+    transform: translateX(3px);
+
+    box-shadow:
+        0 5px 15px rgba(1, 21, 81, 0.06);
+
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.check {
+
+    width: 22px;
+    height: 22px;
+
+    border: 2px solid #cbd3df;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    transition: 0.2s;
+
+}
+
+
+.check:hover {
+
+    border-color: var(--primary-light);
+
+}
+
+
+/* tarefa concluída */
+
+.task.completed .check {
+
+    background: var(--primary-light);
+
+    border-color: var(--primary-light);
+
+    color: white;
+
+}
+
+
+.task.completed .check::after {
+
+    content: "✓";
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.task-text {
+
+    flex: 1;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    word-break: break-word;
+
+}
+
+
+.task.completed .task-text {
+
+    text-decoration: line-through;
+
+    color: #9aa1ad;
+
+}
+
+
+/* =========================
+   BOTÃO REMOVER
+========================= */
+
+.remove {
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #fff0f0;
+
+    color: var(--danger);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.remove:hover {
+
+    background: var(--danger);
+
+    color: white;
+
+}
+
+
+/* =========================
+   ESTADO VAZIO
+========================= */
+
+.empty-state {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    color: var(--text-light);
+
+}
+
+
+.empty-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #edf5ff;
+
+    color: var(--primary-light);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+}
+
+
+.empty-state h3 {
+
+    color: var(--primary);
+
+    margin-bottom: 6px;
+
+    font-size: 16px;
+
+}
+
+
+.empty-state p {
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+
+    padding: 18px 35px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    color: #9aa1ad;
+
+}
+
+
+footer span:first-child {
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+}
+
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes taskAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px) {
+
+    .app {
+
+        margin: 15px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .header {
+
+        padding: 25px;
+
+    }
+
+
+    .content {
+
+        padding: 25px;
+
+    }
+
+
+    .task-input {
+
+        flex-direction: column;
+
+    }
+
+
+    #addButton {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+
+    footer {
+
+        padding: 18px 25px;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+}
