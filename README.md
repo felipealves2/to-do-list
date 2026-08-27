@@ -1,4 +1,4 @@
-#- To-Do List
+## To-Do List
 
 Uma aplicação web simples e responsiva para gerenciamento de tarefas, desenvolvida com HTML, CSS e JavaScript puro.
 
